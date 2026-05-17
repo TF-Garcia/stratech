@@ -239,12 +239,13 @@ a {
 }
 
 .intro-copy .eyebrow {
-  text-align: left;
+  text-align: center;
   width: min(100%, 900px);
 }
 
 .intro-copy h2 {
   width: min(100%, 900px);
+  text-align: center; 
 }
 
 .intro-copy p {
