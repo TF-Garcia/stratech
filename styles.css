@@ -662,14 +662,20 @@ li {
 @media (max-width: 980px) {
   .site-header {
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 14px 22px;
+  }
+
+  .site-header .header-cta {
+    display: none;
   }
 
   .nav-links {
     flex-wrap: wrap;
     order: 3;
     width: 100%;
+    justify-content: center;
   }
 
   .hero {
@@ -724,6 +730,7 @@ li {
     padding-bottom: 2px;
     scrollbar-width: none;
     white-space: nowrap;
+    justify-content: center;
   }
 
   .nav-links::-webkit-scrollbar {
@@ -731,7 +738,6 @@ li {
   }
 
   .nav-links a {
-    border: 1px solid var(--line);
     border-radius: 8px;
     flex: 0 0 auto;
     padding: 8px 10px;
