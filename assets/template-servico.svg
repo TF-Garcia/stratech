@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Preview de pagina de servico</title>
+  <desc id="desc">Mockup visual de pagina de servico com oferta, etapas e chamada de contato.</desc>
+  <rect width="960" height="600" fill="#07101d"/>
+  <rect x="54" y="48" width="852" height="504" rx="24" fill="#f7f9fd"/>
+  <rect x="96" y="92" width="250" height="34" rx="8" fill="#07101d"/>
+  <rect x="96" y="148" width="430" height="64" rx="12" fill="#1689ff"/>
+  <rect x="96" y="238" width="346" height="18" rx="9" fill="#526071"/>
+  <rect x="96" y="270" width="284" height="18" rx="9" fill="#526071"/>
+  <rect x="604" y="98" width="196" height="196" rx="28" fill="#0d1422"/>
+  <path d="M660 196h84M702 154v84" stroke="#35d4ff" stroke-width="18" stroke-linecap="round"/>
+  <rect x="96" y="360" width="204" height="116" rx="14" fill="#ffffff" stroke="#dfe7f1" stroke-width="4"/>
+  <rect x="336" y="360" width="204" height="116" rx="14" fill="#ffffff" stroke="#dfe7f1" stroke-width="4"/>
+  <rect x="576" y="360" width="204" height="116" rx="14" fill="#ffffff" stroke="#dfe7f1" stroke-width="4"/>
+  <circle cx="136" cy="400" r="20" fill="#56d89c"/>
+  <circle cx="376" cy="400" r="20" fill="#f2b84b"/>
+  <circle cx="616" cy="400" r="20" fill="#1689ff"/>
+</svg>
