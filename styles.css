@@ -30,6 +30,17 @@ body {
   line-height: 1.6;
 }
 
+main,
+section,
+.site-header,
+.hero-content,
+.section-heading,
+.intro-copy,
+.contact-copy,
+.contact-panel {
+  min-width: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -76,6 +87,8 @@ a {
   color: var(--muted);
   font-size: 0.94rem;
   font-weight: 600;
+  justify-content: center;
+  min-width: 0;
 }
 
 .nav-links a,
@@ -100,6 +113,7 @@ a {
   justify-content: center;
   min-height: 46px;
   padding: 0 18px;
+  text-align: center;
 }
 
 .header-cta,
@@ -118,7 +132,7 @@ a {
   align-items: center;
   display: grid;
   gap: clamp(32px, 6vw, 80px);
-  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  grid-template-columns: minmax(0, 1fr);
   min-height: calc(88vh - 75px);
   overflow: hidden;
   padding: clamp(56px, 8vw, 100px) clamp(20px, 5vw, 72px) clamp(32px, 5vw, 64px);
@@ -141,6 +155,11 @@ a {
 .hero-media {
   position: relative;
   z-index: 1;
+}
+
+.hero-content {
+  max-width: 760px;
+  width: 100%;
 }
 
 .hero-media {
@@ -176,7 +195,7 @@ a {
   color: var(--muted);
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   margin: 28px 0 0;
-  max-width: 660px;
+  max-width: 680px;
 }
 
 .hero-actions {
@@ -220,14 +239,17 @@ a {
 }
 
 .intro-copy .eyebrow {
-  text-align: justify;
-  width: 70%;
-  margin-left: 9.9%;
+  text-align: left;
+  width: min(100%, 900px);
+}
+
+.intro-copy h2 {
+  width: min(100%, 900px);
 }
 
 .intro-copy p {
   text-align: justify;
-  width: 70%;
+  width: min(100%, 900px);
 }
 
 .intro-strip .intro-grid {
@@ -295,7 +317,7 @@ a {
 .project-grid {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 38px;
 }
 
@@ -345,7 +367,7 @@ li {
 }
 
 .manifesto-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .manifesto-grid ul {
@@ -639,14 +661,15 @@ li {
 
 @media (max-width: 980px) {
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 14px;
-    position: static;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px 22px;
   }
 
   .nav-links {
     flex-wrap: wrap;
+    order: 3;
+    width: 100%;
   }
 
   .hero {
@@ -659,12 +682,14 @@ li {
     max-width: 340px;
   }
 
-  .intro-strip,
-  .intro-strip .intro-grid,
   .solution-grid,
   .manifesto-grid,
   .project-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .intro-strip .intro-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-section {
@@ -677,16 +702,67 @@ li {
   .site-header,
   .section,
   .hero {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-header {
+    gap: 12px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    position: static;
+  }
+
+  .brand img {
+    width: 132px;
+  }
+
+  .nav-links {
+    gap: 8px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    white-space: nowrap;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    flex: 0 0 auto;
+    padding: 8px 10px;
   }
 
   .header-cta {
+    min-height: 42px;
     width: 100%;
+  }
+
+  .hero {
+    padding-bottom: 48px;
+    padding-top: 48px;
+  }
+
+  .hero-content img {
+    width: min(100%, 300px);
   }
 
   .hero h1 {
     font-size: clamp(2.9rem, 13vw, 3.25rem);
+  }
+
+  .hero-copy {
+    font-size: 1.03rem;
+    margin-top: 22px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-top: 28px;
   }
 
   .intro-strip,
@@ -697,13 +773,84 @@ li {
     grid-template-columns: 1fr;
   }
 
+  .intro-strip div {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .intro-copy {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .intro-copy p {
+    text-align: left;
+  }
+
+  .section-heading h2,
+  .contact-section h2 {
+    font-size: clamp(1.9rem, 11vw, 2.55rem);
+    line-height: 1.08;
+  }
+
+  .solution-grid article,
+  .manifesto-grid article,
+  .project-card,
+  .post-card {
+    padding: 22px;
+  }
+
+  .solution-grid article {
+    min-height: auto;
+  }
+
   .template-controls {
     justify-content: space-between;
+  }
+
+  .template-card-content {
+    padding: 18px;
+  }
+
+  .contact-item {
+    grid-template-columns: 42px minmax(0, 1fr);
+    min-height: 66px;
+  }
+
+  .contact-icon {
+    height: 42px;
+    width: 42px;
   }
 
   .primary-button,
   .secondary-button,
   .contact-section .primary-button {
     width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header,
+  .section,
+  .hero {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-content img {
+    width: min(100%, 250px);
+  }
+
+  .hero-copy,
+  .section-heading p:not(.eyebrow),
+  .contact-section p,
+  article p,
+  li {
+    font-size: 0.96rem;
+  }
+
+  .template-nav {
+    height: 38px;
+    width: 38px;
   }
 }
